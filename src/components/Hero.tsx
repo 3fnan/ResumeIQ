@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, ChevronRight, Cpu, FileText, Sparkles, Trophy } from 'lucide-react';
 import { Button } from './ui/Button';
+import { Variants } from 'framer-motion';
 
 interface HeroProps {
   onStartClick: () => void;
@@ -19,8 +20,7 @@ export default function Hero({ onStartClick }: HeroProps) {
       },
     },
   };
-
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
